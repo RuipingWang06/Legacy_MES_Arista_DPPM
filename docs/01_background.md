@@ -14,7 +14,7 @@ The required information exists in our **legacy MES system**, but it is displaye
 - CRD  
 - Material  
 - Description  
-- GRN (Goods Receipt Note)  
+- GRN (Goods Receipt Number)  
 - Vendor  
 
 However, the existing query logic is tightly coupled to manual SN-level inspection and is not designed for automation or date-based aggregation. Furthermore, **inconsistent join conditions** and the **absence of standardized foreign keys** make it difficult to reuse the queries directly for reporting purposes.
