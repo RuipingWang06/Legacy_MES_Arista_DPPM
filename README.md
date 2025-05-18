@@ -1,6 +1,6 @@
 # Legacy-MES-DPPM-Calcualtion
 
-This repository contains a stored procedure used to calculate **Consumed Qty**, **Failed Qty**, **PartNumber**, **Supplier**,**MPN**,**StartDate** on a daily basis, typically for manufacturing or quality control use cases.
+This repository contains a **stored procedure** Source from **Legacy MES** used to calculate **Consumed Qty**, **Failed Qty**, **PartNumber**, **Supplier**,**MPN**,**StartDate** on a daily basis, typically for manufacturing or quality control use cases.
 
 ## 🛠️ Features
 
