@@ -1,4 +1,4 @@
-CREATE                       PROCEDURE dbo.up_QM_TestDataListTestAnalysisRepair
+CREATE  PROCEDURE dbo.up_QM_TestDataListTestAnalysisRepair
 	@UserID_ID int,
 	@StartDate varchar(50),
 	@EndDate varchar(50),
