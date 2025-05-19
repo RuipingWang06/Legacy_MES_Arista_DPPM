@@ -1,48 +1,66 @@
 ### 📘 Project Background
 
-This project is initiated based on a request from **Arista**, who seeks enhanced visibility into the materials consumed during the manufacturing of their products. Specifically, they require a detailed breakdown of:
+This project was initiated at the request of **Arista**, aiming to improve visibility into materials consumed during product manufacturing. The key focus areas include:
 
 - Material consumption quantity  
 - Associated suppliers  
 - Part Numbers  
 - Manufacturer Part Numbers (MPNs)
 
-#### 📌 Current System & Limitations
+---
 
-#### **ConsumedQty**
+### 🛠️ Current System & Challenges
 
-The required information resides in the **legacy MES system**, presented at the **CRD (Component Requirement Document)** level. Users currently rely on the **Purge data page**, where a **Serial Number (SN)** is used to retrieve the following information:
+#### 🔹 ConsumedQty (Consumption Data)
 
-- CRD  
-- Material  
-- Description  
-- GRN (Goods Receipt Number)  
-- Vendor  
+- Data resides in the **legacy MES system**, presented at the **CRD (Component Requirement Document)** level.
+- Accessed via the **Purge data page** using **Serial Number (SN)**.
+- Output includes: CRD, Material, Description, GRN, Vendor.
 
-However, the existing query logic is tightly coupled to manual SN-level access and is not suitable for automation or date-based aggregation. Additionally, **inconsistent join conditions** and the **absence of standardized foreign keys** hinder the transformation of these queries into a reusable reporting solution.
+**Limitations:**
 
-#### **FailedQty**
+- Manual SN-based queries — not suitable for date-based reporting.
+- Inconsistent join logic and lack of standardized foreign keys hinder automation.
 
-Failure-related data is also stored in the **legacy MES system**, but accessed through an **API** that retrieves repair records based on `analysisStartDate` and various other parameters. This logic does **not align with the requirement** to extract data by **rework date**, and it only returns failed records that involve component replacement.
+#### 🔹 FailedQty (Failure/Rework Data)
 
-Consequently, the logic must be **redesigned** to apply the correct filters and ensure accurate extraction of both failure and rework-related quantities.
+- Accessed through an **API** based on `analysisStartDate` and other parameters.
+- Only includes **failures involving component replacement**.
+- Does **not support filtering by rework date**, limiting data completeness.
 
+---
 
-#### 🔍 Project Objective
+### 🎯 Project Objectives
 
-The goal is to **rebuild the logic** behind these queries to support:
+- Redesign query logic to support **start-date-driven inputs**.
+- Enable **automated aggregation** of:
+  - Consumed quantities  
+  - Failed quantities  
+- Ensure accurate mapping of:
+  - Supplier  
+  - Part Number  
+  - Manufacturer Part Number (MPN)
 
-- **Start-date-driven inputs**  
-- **Automated aggregation** of consumed material quantities  
-- **Accurate supplier and part number mapping**
+---
 
-#### 📤 Expected Deliverable
+### 📤 Deliverables
 
-The final output will be an **automated weekly email report** sent to Arista, containing:
+#### 1. Automated Weekly Email Report to Arista
 
+Includes:
 - Consumed Quantity  
 - Supplier  
 - Part Number  
 - MPN  
 
-This report allows the customer to **store and manage the data in their internal systems** for **traceability, analysis, and long-term planning**.
+> Purpose: For traceability, analysis, and long-term planning in Arista's internal systems.
+
+#### 2. Internal Power BI Report
+
+Includes:
+- Start Date  
+- Consumed Quantity  
+- Failed Quantity  
+- Supplier  
+- Part Number  
+- MPN
