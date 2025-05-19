@@ -9,7 +9,9 @@ This project is initiated based on a request from **Arista**, who seeks enhanced
 
 #### 📌 Current System & Limitations
 
-The required information exists in our **legacy MES system**, but it is displayed at the **CRD (Component Requirement Document)** level. Users currently rely on the **Purge data page**, which allows them to input a **Serial Number (SN)** to view related data such as:
+#### **ConsumedQty**
+
+The required information resides in the **legacy MES system**, presented at the **CRD (Component Requirement Document)** level. Users currently rely on the **Purge data page**, where a **Serial Number (SN)** is used to retrieve the following information:
 
 - CRD  
 - Material  
@@ -17,7 +19,14 @@ The required information exists in our **legacy MES system**, but it is displaye
 - GRN (Goods Receipt Number)  
 - Vendor  
 
-However, the existing query logic is tightly coupled to manual SN-level inspection and is not designed for automation or date-based aggregation. Furthermore, **inconsistent join conditions** and the **absence of standardized foreign keys** make it difficult to reuse the queries directly for reporting purposes.
+However, the existing query logic is tightly coupled to manual SN-level access and is not suitable for automation or date-based aggregation. Additionally, **inconsistent join conditions** and the **absence of standardized foreign keys** hinder the transformation of these queries into a reusable reporting solution.
+
+#### **FailedQty**
+
+Failure-related data is also stored in the **legacy MES system**, but accessed through an **API** that retrieves repair records based on `analysisStartDate` and various other parameters. This logic does **not align with the requirement** to extract data by **rework date**, and it only returns failed records that involve component replacement.
+
+Consequently, the logic must be **redesigned** to apply the correct filters and ensure accurate extraction of both failure and rework-related quantities.
+
 
 #### 🔍 Project Objective
 
