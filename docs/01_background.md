@@ -3,7 +3,7 @@
 This project was initiated at the request of **Arista**, aiming to improve visibility into materials consumed during product manufacturing. The key focus areas include:
 
 - Material consumption quantity  
-- Associated suppliers  
+- Suppliers  
 - Part Numbers  
 - Manufacturer Part Numbers (MPNs)
 
@@ -20,13 +20,13 @@ This project was initiated at the request of **Arista**, aiming to improve visib
 **Limitations:**
 
 - Manual SN-based queries — not suitable for date-based reporting.
-- Inconsistent join logic and lack of standardized foreign keys hinder automation.
+- Inconsistent join logic and lack of standardized foreign keys.
 
 #### 🔹 FailedQty (Failure/Rework Data)
 
 - Accessed through an **API** based on `analysisStartDate` and other parameters.
 - Only includes **failures involving component replacement**.
-- Does **not support filtering by rework date**, limiting data completeness.
+- Does **not support filtering by rework date**.
 
 ---
 
