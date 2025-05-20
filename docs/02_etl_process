@@ -1,12 +1,16 @@
 Consumed qty
 - Retrieve all Serial Numbers (SNs) from the previous day.
 - Use a cursor to iterate through each SN.
-- For each SN, execute the **Purge data** query to fetch related data. the query is .
+- For each SN, execute the **Purge data** query to fetch related data. sql/reference/up_CT_ListCRDsBySerialNumberByCustomer.sql .
 - Insert the query results into a temporary table within the loop.
 - After all data is collected, aggregate the **consumed quantity** by:
   - Supplier  
   - MPN (Manufacturer Part Number)  
   - Material
 
-
 failed qty
+- Review the user's query conditions used when calling the API.
+- Analyze the API's internal SQL to understand the default filter conditions.
+- Identify the gap between the default logic and the user's requirement.
+- Refine the logic to only return **FailedQty** records where **replacement occurred**.
+
