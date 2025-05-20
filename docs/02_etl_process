@@ -2,7 +2,7 @@
 
 #### 📦 Consumed Quantity Extraction
 
-- Retrieve all Serial Numbers (SNs) from the previous day.
+- Retrieve all Serial Numbers (SNs) from the previous day into an temp table.
 - Use a cursor to iterate through each SN.
 - For each SN, execute the **Purge data** query to fetch related data:  
   `sql/reference/up_CT_ListCRDsBySerialNumberByCustomer.sql`
