@@ -13,4 +13,15 @@ failed qty
 - Analyze the API's internal SQL to understand the default filter conditions.
 - Identify the gap between the default logic and the user's requirement.
 - Refine the logic to only return **FailedQty** records where **replacement occurred**.
+- Aggregate **FailedQty** at the following dimension levels:
+  - Supplier  
+  - MPN (Manufacturer Part Number)  
+  - Material  
+
+finally
+- Join the aggregated **FailedQty** data with the corresponding **ConsumedQty** dataset on the same dimensions.
+- Insert the final joined result into a temporary table for further use.
+
+
+
 
