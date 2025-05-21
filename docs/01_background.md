@@ -1,38 +1,42 @@
 ### 📘 Project Background
 
-This project was initiated at the request of **Arista**, aiming to improve visibility into materials consumed during product manufacturing. The key focus areas include:
+This project was initiated at the request of **Arista** to enhance visibility into material consumption during product manufacturing. The key focus areas are:
 
-- Material consumption quantity  
+- Material Consumed Qty
+- Failed Qty
 - Suppliers  
 - Part Numbers  
 - Manufacturer Part Numbers (MPNs)
 
 ---
 
-### 🛠️ Current System & Challenges
+### 🛠️ Current System Challenges
 
-#### 🔹 ConsumedQty (Consumption Data)
+#### 🔹 ConsumedQty 
 
-- Data resides in the **legacy MES system**, presented at the **CRD (Component Requirement Document)** level.
-- Accessed via the **Purge data page** using **Serial Number (SN)**.
-- Output includes: CRD, Material, Description, GRN, Vendor.
+- Data is stored in the **legacy MES system** at the **CRD (Component Requirement Document)** level.
+- Accessed through the **Purge Data** page using a **Serial Number (SN)**.
+- The output includes: CRD, Material, Description, GRN, Vendor, etc.
+- QE currently needs to manually summarize consumed quantities by **Supplier**, **Part Number**, and **MPN**.
 
 **Limitations:**
 
-- Manual SN-based queries — not suitable for date-based reporting.
-- Inconsistent join logic and lack of standardized foreign keys.
+- **Manual SN-based queries** — not suitable for date-based reporting.
 
 #### 🔹 FailedQty (Failure/Rework Data)
 
 - Accessed through an **API** based on `analysisStartDate` and other parameters.
-- Only includes **failures involving component replacement**.
-- Does **not support filtering by rework date**.
 
+**Limitations:**
+
+- Does **not support filtering by rework date**
+- not able return failures including **component replacement**.
+  
 ---
 
 ### 🎯 Project Objectives
 
-- Redesign query logic to support **start-date-driven inputs**.
+- Enable **start-date-driven inputs**.
 - Enable **automated aggregation** of:
   - Consumed quantities  
   - Failed quantities  
@@ -45,7 +49,7 @@ This project was initiated at the request of **Arista**, aiming to improve visib
 
 ### 📤 Deliverables
 
-#### 1. Automated Weekly Email Report to Arista
+#### 1. Automated Weekly Email excel to Arista
 
 Includes:
 - Consumed Quantity  
@@ -53,14 +57,17 @@ Includes:
 - Part Number  
 - MPN  
 
-> Purpose: For traceability, analysis, and long-term planning in Arista's internal systems.
+> Purpose: To import the data into Arista’s internal systems for further analysis and traceability.
 
 #### 2. Internal Power BI Report
 
 Includes:
 - Start Date  
 - Consumed Quantity  
-- Failed Quantity  
+- Failed Quantity
+- DPPM
 - Supplier  
 - Part Number  
 - MPN
+
+> To enable our internal team to monitor DPPM (Defective Parts Per Million) on a daily basis.
