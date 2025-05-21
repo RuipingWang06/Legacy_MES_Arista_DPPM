@@ -1,7 +1,7 @@
 ### Lesson learn
 - **Query Development**
   - When reviewing documents, if only columns and tables are mentioned, follow up to confirm which **system screen** the data comes from.
-  - Every system—whether it uses APIs or procedures—should have **underlying SQL logic**.
+  - Every page for a system—whether it uses APIs or procedures—should have **underlying SQL logic**.
   - Always identify and request the **correct reference logic** from the system owner.
   - **Do not build SQL logic on your own** without confirmed source references.
 
