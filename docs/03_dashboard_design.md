@@ -9,4 +9,4 @@
 
 - Build a Power BI report to display daily DPPM (Defective Parts Per Million).  
 - Include filters for part number, supplier, and date.  
-- Support daily monitoring of failure rates.
+
