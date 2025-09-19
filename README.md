@@ -1,4 +1,4 @@
-# Legacy-MES-DPPM-Calcualtion
+# Legacy-MES-DPPM-Calculation
 
 This repository contains a stored procedure (Complex SQL) sourced from a legacy MES system that calculates Consumed Qty, Failed Qty, Part Number, Supplier, MPN, and Start Date on a daily basis. A paginated report is then generated and automatically delivered via excel attachment to clients weekly, typically for manufacturing or quality control use cases..
 
