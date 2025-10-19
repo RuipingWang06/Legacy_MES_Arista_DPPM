@@ -10,6 +10,7 @@
 
 - Build a Power BI report to display daily DPPM (Defective Parts Per Million).  
 - Include filters for part number, supplier, and date.
-- 
+- https://github.com/RuipingWang06/Legacy_MES_Arista_DPPM/blob/main/assets/weekly_consumed_paginated_report.png
+
 
 
