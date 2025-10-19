@@ -1,4 +1,4 @@
-### Lesson learn
+### Challenge & Lesson learn
 - **Query Development**
   - When reviewing documents, if only columns and tables are mentioned, follow up to confirm which **system screen** the data comes from.
   - Every functional screen for a system—whether it uses APIs or procedures—should have **underlying SQL logic**.
@@ -6,7 +6,7 @@
   - **Do not build SQL logic on your own** without confirmed source references.
 
 - **Challenge with data volume:**  
-  One day's CRD-level data is too large to open in Excel, making testing difficult.
+  One day's CRD-level data is too large to open in Excel,which made testing is difficult.
 
 - **Daily data validation needs:**  
   Since users test data on a daily basis, we decided to:
@@ -37,4 +37,5 @@
   - However, the **filename cannot include dynamic parameters** (e.g., date).
   - If the user requires a **dynamic filename with date**, consider sending the report directly from **SQL Server** instead.
   - SQL Server can send emails with attachments using a **stored procedure**.
+
 
