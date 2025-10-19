@@ -5,7 +5,7 @@
   - Always identify and request the **correct reference logic** from the system owner.
   - **Do not build SQL logic on your own** without confirmed source references.
 
-- **Challenge with data volume:**  
+- **Data volume is too large to do data vilidate:**  
   One day's CRD-level data is too large to open in Excel,which made testing is difficult.
 
 - **Daily data validation needs:**  
@@ -37,5 +37,6 @@
   - However, the **filename cannot include dynamic parameters** (e.g., date).
   - If the user requires a **dynamic filename with date**, consider sending the report directly from **SQL Server** instead.
   - SQL Server can send emails with attachments using a **stored procedure**.
+
 
 
