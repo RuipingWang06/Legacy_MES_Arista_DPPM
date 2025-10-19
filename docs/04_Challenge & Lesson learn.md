@@ -20,7 +20,7 @@
   - We overlooked that the **unusual join condition** could cause inconsistent results:
     - Some SNs correctly mapped to their suppliers.
     - Others failed to match due to timing overlap issues.
-- **Join condition that caused issues:**
+    - **Join condition that caused issues:**
   ```sql
   (z.StartTime BETWEEN d.LoadTime AND d.RemovalTime)
   OR (z.StartTime >= d.LoadTime AND d.RemovalTime IS NULL)
@@ -37,6 +37,7 @@
   - However, the **filename cannot include dynamic parameters** (e.g., date).
   - If the user requires a **dynamic filename with date**, consider sending the report directly from **SQL Server** instead.
   - SQL Server can send emails with attachments using a **stored procedure**.
+
 
 
 
